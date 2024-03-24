@@ -74,7 +74,7 @@ if __name__=='__main__':
     ## I'm trying DBSCAN on simple presence/absence matrix
     ## essentially DBSCAN identifies dense regions in a dataset and assigns each data point to a cluster 
     ## or labels it as noise, based on the density of points around it.
-    dbscan = DBSCAN(eps=0.5, min_samples=2)
+    dbscan = DBSCAN(eps=1.8, min_samples=2)
     cluster_labels = dbscan.fit_predict(df)
     clusters = np.unique(cluster_labels) # unique clusters
     df['Genus'] = genera
